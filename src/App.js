@@ -1,7 +1,7 @@
 import './App.css';
 import "./input.css";
 import "./output.css";
-import Login from './pages/Login';
+import AppRouter from './router/AppRouter';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-    <Login/>
+   <AppRouter/>
     </div>
   );
 }

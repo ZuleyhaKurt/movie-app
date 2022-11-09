@@ -2,11 +2,13 @@
 import { useState } from 'react';
 import {createUserWithEmailAndPassword} from "firebase/auth"
 import { auth } from "../Firebase"
-import {signInWithGoogle} from "../Firebase"
+import { signInWithGoogle } from "../Firebase"
+// import{useNavigate} from "react-router-dom"
 
 const Login = () => {
 
-
+// const navigate = useNavigate()
+    
 const [logEmail, setLogEmail] = useState("")
 const [logPass, setLogPass] = useState("")
 
@@ -14,7 +16,8 @@ const [logPass, setLogPass] = useState("")
   const loginUser = async () => {
     try {
       const user = await createUserWithEmailAndPassword(auth,logEmail,logPass)
-      console.log(user)
+        console.log(user)
+        // navigate("/movieDetail")
     } catch (error) {
       console.log(error.message)
     }
