@@ -1,7 +1,8 @@
 
 import { useState } from 'react';
 import {createUserWithEmailAndPassword} from "firebase/auth"
-import {auth} from "../Firebase"
+import { auth } from "../Firebase"
+import {signInWithGoogle} from "../Firebase"
 
 const Login = () => {
 
@@ -54,15 +55,16 @@ const [logPass, setLogPass] = useState("")
             required
         />
         <div className="w-full d-flex justify-content-center align-items-center m-3 ">
-          <button className=" w-[50%] bg-gray-800 text-white rounded-md p-1 "
+          <button className=" w-[100%] bg-gray-800 text-white rounded-md p-1 mt-5 "
         onClick={loginUser} 
           >
            Login
             </button>
-            <button className=" w-[50%] bg-gray-800 text-white rounded-md p-1 "
-        onClick={loginUserGoogle} 
+                      <br />
+            <button className=" w-[100%] bg-gray-800 text-white rounded-md p-1 mt-2 "
+        onClick={signInWithGoogle} 
           >
-           Login
+          Sign in with Googgle
             </button>
 
         </div>
