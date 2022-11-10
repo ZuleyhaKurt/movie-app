@@ -1,20 +1,19 @@
 import React from 'react'
 
 const Card = ({ item, index }) => {
-    console.log(item.backdrop_path)
+    
     return (
-    <div class=" w-[25rem] h-[25rem] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800          dark:border-gray-700" key={index}>
-        
-        <img class="rounded-t-lg" src={item?.poster_path} alt=""/>
+    <div className=" relative overflow-hidden card w-[25rem] h-[25rem] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800          dark:border-gray-700" key={index}>
        
-        <div class="p-5">
-        
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{item?.overview}</p>
-        <div>
+        <img className='w-[25rem] h-[22rem]' src={`https://image.tmdb.org/t/p/w1280${item?.poster_path}`} alt="" />
+               
+        <div className='bg-slate-400 h-[3rem] flex justify-between px-4 items-center'>
         <a href="">{item?.title} </a>
-        <span>rate</span>
-        </div>
-        </div>
+                <span className='px-2 h-[2rem] rounded-lg bg-yellow-400'>{item?.vote_average}</span>
+            </div>
+           
+        <p className="font-normal text-black overview  bg-slate-400 opacity-80 absolute bottom-[3rem]">{item?.overview}</p>
+        
     </div>
 
   )

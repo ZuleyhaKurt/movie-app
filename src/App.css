@@ -1,8 +1,25 @@
 .App {
   text-align: center;
 }
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-.App-logo {
+.card .overview{
+  transition: all 1s;
+}
+.overview {
+  width: 100%;
+  right: -100%;
+  z-index: 1;
+}
+.card:hover .overview {
+  right: 0;}
+
+
+  .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
