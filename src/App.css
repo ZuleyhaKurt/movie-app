@@ -53,3 +53,9 @@
     transform: rotate(360deg);
   }
 }
+.loginpage{
+  background-image: url("./assets/MrMrsSmith.webp");
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+}

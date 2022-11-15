@@ -27,11 +27,11 @@ const [regPass, setRegPass] = useState("")
 
 
   return (
-    <div className="relative" >
+    <div className="loginpage w-[100vw] h-[100vh] flex justify-center  " >
     {/* <img src={image} alt=""  className='h-[100vh] w-[100%] '/> */}
-    <div className="bg-gray-500 opacity-75 w-[300px] h-[350px] absolute top-10 right-16 rounded-lg shadow-lg shadow-gray-200 flex flex-col justify-center items-center gap-4 "> 
+    <div className="bg-black  w-[350px] h-[250px] mt-[380px]  rounded-lg shadow-lg shadow-gray-200 flex flex-col justify-center items-center gap-4 "> 
           <div className="w-[80%]">
-            <p className="text-start font-bold indent-2">
+            <p className="text-start text-white font-bold indent-2">
               E-mail
             </p>
             <input
@@ -45,7 +45,7 @@ const [regPass, setRegPass] = useState("")
         </div>
         
         <div className="w-[80%]">
-          <p className="text-start font-bold indent-2">
+          <p className="text-start  text-white font-bold indent-2">
           Password
         </p>
         <input
@@ -56,8 +56,8 @@ const [regPass, setRegPass] = useState("")
             onChange={(e) => setRegPass(e.target.value)}
             required
         />
-        <div className="w-full d-flex justify-content-center align-items-center m-3 ">
-          <button className=" w-[100%] bg-gray-800 text-white rounded-md p-1 mt-5 "
+        <div className="w-full d-flex justify-content-center align-items-center  ">
+          <button className=" w-[90%] bg-blue-600 text-white rounded-md p-1 mt-5 "
         onClick={registerUser} 
           >
            Register

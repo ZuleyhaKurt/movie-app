@@ -7,7 +7,7 @@ const Card = ({ films, setFilms }) => {
     const [query,setQuery] = useState("")
     const [loading,setLoading] = useState(false)
     const navigate= useNavigate()
-    
+    console.log(films)
     const getMovie = async () => {
         setLoading(true)
         try {

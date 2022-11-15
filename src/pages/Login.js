@@ -3,7 +3,8 @@ import { useState } from 'react';
 import {onAuthStateChanged, signInWithEmailAndPassword} from "firebase/auth"
 import { auth } from "../Firebase"
 import { signInWithGoogle } from "../Firebase"
-import{useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+
 
 const Login = () => {
 
@@ -14,6 +15,7 @@ const [logPass, setLogPass] = useState("")
 
 
   const loginUser = async () => {
+
     try {
       const user = await signInWithEmailAndPassword(auth,logEmail,logPass)
         console.log(user)
@@ -28,17 +30,19 @@ const [logPass, setLogPass] = useState("")
 
 
   return (
-    <div className="relative" >
-    {/* <img src={image} alt=""  className='h-[100vh] w-[100%] '/> */}
-    <div className="bg-gray-500 opacity-75 w-[300px] h-[350px] absolute top-10 right-16 rounded-lg shadow-lg shadow-gray-200 flex flex-col justify-center items-center gap-4 "> 
+    <div className="loginpage w-[100vw] h-[100vh] flex justify-center  " >
+    
+  
+      
+    <div className="bg-black  w-[350px] h-[250px] mt-[380px] rounded-lg shadow-lg shadow-gray-200 flex flex-col justify-center items-center gap-4 "> 
           <div className="w-[80%]">
-            <p className="text-start font-bold indent-2">
+            <p className="text-start  text-white font-bold ">
               E-mail
             </p>
             <input
             type="e-mail"
             placeholder="Enter Your E-mail Adress"
-            className="w-[90%] rounded-md indent-2 h-8"
+            className="w-[100%] rounded-md indent-2 h-8"
             value={logEmail}
             onChange={(e) => setLogEmail(e.target.value)}
             required
@@ -46,25 +50,25 @@ const [logPass, setLogPass] = useState("")
         </div>
         
         <div className="w-[80%]">
-          <p className="text-start font-bold indent-2">
+          <p className="text-start text-white font-bold ">
           Password
         </p>
         <input
             type="password"
             placeholder="Enter Your Pasword"
-            className="w-[90%] rounded-md indent-2 h-8"
+            className="w-[100%] rounded-md indent-2 h-8"
             value={logPass}
             onChange={(e) => setLogPass(e.target.value)}
             required
         />
-        <div className="w-full d-flex justify-content-center align-items-center m-3 ">
-          <button className=" w-[100%] bg-gray-800 text-white rounded-md p-1 mt-5 "
+        <div className="w-full d-flex justify-content-center align-items-center  ">
+          <button className=" w-[100%] bg-blue-600 text-white rounded-md p-1 mt-5 "
         onClick={loginUser} 
           >
            Login
             </button>
                       <br />
-            <button className=" w-[100%] bg-gray-800 text-white rounded-md p-1 mt-2 "
+            <button className=" w-[100%] bg-blue-600 text-white rounded-md p-1 mt-2 "
         onClick={signInWithGoogle} 
           >
           Sign in with Googgle
