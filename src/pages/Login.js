@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import {onAuthStateChanged, signInWithEmailAndPassword} from "firebase/auth"
+import { signInWithEmailAndPassword} from "firebase/auth"
 import { auth } from "../Firebase"
 import { signInWithGoogle } from "../Firebase"
 import { useNavigate } from "react-router-dom"
@@ -69,7 +69,7 @@ const [logPass, setLogPass] = useState("")
             </button>
                       <br />
             <button className=" w-[100%] bg-blue-600 text-white rounded-md p-1 mt-2 "
-        onClick={signInWithGoogle} 
+        onClick={()=>signInWithGoogle(navigate)} 
           >
           Sign in with Googgle
             </button>

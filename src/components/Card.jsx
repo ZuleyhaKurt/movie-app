@@ -47,7 +47,7 @@ const Card = ({ films, setFilms }) => {
                         <div className=" relative overflow-hidden card w-[25rem] h-[25rem] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800          dark:border-gray-700" key={index}>
        
                             <img className='w-[25rem] h-[22rem]'
-                                // onClick={() => navigate(`/movieDetail`, { state: item })}
+                                onClick={() => navigate(`/movieDetail`, { state: item })}
                                 src={`https://image.tmdb.org/t/p/w1280${item?.poster_path}`} alt="" />
                       
                             <div className='bg-slate-400 h-[3rem] flex justify-between px-4 items-center'>
